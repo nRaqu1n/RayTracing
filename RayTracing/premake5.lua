@@ -1,11 +1,11 @@
-project "WalnutApp"
+project "RayTracing"
    kind "ConsoleApp"
    language "C++"
    cppdialect "C++17"
    targetdir "bin/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "src/**.h", "src/**.cpp" }
+   files { "**.h", "**.cpp" }
 
    includedirs
    {

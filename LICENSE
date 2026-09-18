@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Studio Cherno
+Copyright (c) 2022-2026 Stavros Malagaris
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,13 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+THIRD-PARTY SOFTWARE
+
+This project is built on the Walnut application framework
+(https://github.com/TheCherno/Walnut), which is included as a git submodule and
+is licensed separately under the MIT License, Copyright (c) 2022 Studio Cherno.
+Walnut in turn vendors Dear ImGui, GLFW, GLM and the Vulkan SDK, each under
+their own licenses.
