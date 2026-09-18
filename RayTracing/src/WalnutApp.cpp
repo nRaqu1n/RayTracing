@@ -11,6 +11,33 @@ using namespace Walnut;
 class ExampleLayer : public Walnut::Layer
 {
 public:
+	ExampleLayer()
+	{
+		{
+			Sphere sphere;
+			sphere.Position = { 0.0f, 0.0f, 0.0f };
+			sphere.Radius = 1.0f;
+			sphere.Albedo = { 1.0f, 0.0f, 1.0f };
+			m_Scene.Spheres.push_back(sphere);
+		}
+
+		{
+			Sphere sphere;
+			sphere.Position = { 1.5f, 0.0f, -5.0f };
+			sphere.Radius = 1.5f;
+			sphere.Albedo = { 0.2f, 0.3f, 1.0f };
+			m_Scene.Spheres.push_back(sphere);
+		}
+
+		{
+			Sphere sphere;
+			sphere.Position = { -2.0f, 1.0f, -3.0f };
+			sphere.Radius = 0.75f;
+			sphere.Albedo = { 0.9f, 0.8f, 0.1f };
+			m_Scene.Spheres.push_back(sphere);
+		}
+	}
+
 	virtual void OnUIRender() override // OnUIRender is called every frame
 	{
 		ImGui::Begin("Settings");
@@ -42,13 +69,14 @@ public:
 		Timer timer;
 
 		m_Renderer.OnResize(m_ViewportWidth, m_ViewportHeight);
-		m_Renderer.Render();
+		m_Renderer.Render(m_Scene);
 
 		m_LastRenderTime = timer.ElapsedMillis();
 	}
 
 private:
 	Renderer m_Renderer;
+	Scene m_Scene;
 	uint32_t m_ViewportWidth = 0;
 	uint32_t m_ViewportHeight = 0;
 
